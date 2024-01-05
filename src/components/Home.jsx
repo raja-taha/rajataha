@@ -1,10 +1,26 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { animate, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import logo from "../assets/logo1_1.png";
 
 const Home = () => {
+  const clientCount = useRef(null);
+  const projectCount = useRef(null);
+
+  const animationCLientsCount = () => {
+    animate(0, 100, {
+      duration: 1,
+      onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
+    });
+  };
+  const animationProjectsCount = () => {
+    animate(0, 500, {
+      duration: 1,
+      onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
+    });
+  };
+
   const animations = {
     h1: {
       initial: {
@@ -56,7 +72,11 @@ const Home = () => {
 
           <article>
             <p>
-              +<span>100</span>
+              +
+              <motion.span
+                whileInView={animationCLientsCount}
+                ref={clientCount}
+              ></motion.span>
             </p>
             <span>Clients Worldwide</span>
           </article>
@@ -64,7 +84,11 @@ const Home = () => {
           <aside>
             <article>
               <p>
-                +<span>500</span>
+                +
+                <motion.span
+                  whileInView={animationProjectsCount}
+                  ref={projectCount}
+                ></motion.span>
               </p>
               <span>Projects Done</span>
             </article>

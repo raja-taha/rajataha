@@ -8,11 +8,12 @@
 
     &:first-of-type {
       padding-left: $p;
+      border-top: 1px solid $color6_2;
 
       > div {
-        border-top: 1px solid $color6_2;
         height: 100%;
-        padding-top: 4rem;
+        padding-top: 6rem;
+        margin-top: -1rem;
         > h1 {
           font: 900 3rem $text1;
         }
