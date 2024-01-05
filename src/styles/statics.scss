@@ -1,17 +1,57 @@
 $text1: "Roboto", sans-serif;
 $text2: "Open Sans", sans-serif;
 
+// Palette 1: Original
+// $color1: #fef2f2;
+// $color2: #286f6c;
+// $color2_1: #174340;
+// $color3: #f26440;
+// $color3_light: rgb(249, 141, 141);
+// $color3_1: #ad4126;
+// $color4: #fff;
+// $color5: #292b46;
+// $color6: #161616;
+// $color6_1: #16161698;
+// $color6_2: #16161622;
+
+// Pallete 2: Yellow Black
 $color1: #fef2f2;
 $color2: #286f6c;
 $color2_1: #174340;
-$color3: #f26440;
+$color3: #f4ce14;
 $color3_light: rgb(249, 141, 141);
-$color3_1: #ad4126;
-$color4: #fff;
-$color5: #292b46;
-$color6: #161616;
+$color3_1: #d7b405;
+$color4: #f5f7f8;
+$color5: #45474b;
+$color6: #495e57;
 $color6_1: #16161698;
 $color6_2: #16161622;
+
+// Pallete 3: Pastel Shades
+// $color1: #f2d8d8;
+// $color2: #030303;
+// $color2_1: #174340;
+// $color3: #5c8984;
+// $color3_light: rgb(249, 141, 141);
+// $color3_1: #466d69;
+// $color4: #fff;
+// $color5: #374259;
+// $color6: #545b77;
+// $color6_1: #16161698;
+// $color6_2: #16161622;
+
+// Pallete 4: Yellow Orange
+// $color1: #f6f1e9;
+// $color2: #030303;
+// $color2_1: #174340;
+// $color3: #ff8400;
+// $color3_light: rgb(249, 141, 141);
+// $color3_1: #ca6d09;
+// $color4: #fff;
+// $color5: #ffcc00;
+// $color6: #4f200d;
+// $color6_1: #16161698;
+// $color6_2: #16161622;
 
 $p: 13.33vmax;
 $p_md: 7vmax;

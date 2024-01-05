@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import data from "../assets/data.json";
+import projectsData from "../assets/projectsData";
 
 const Work = () => {
   return (
@@ -18,7 +18,7 @@ const Work = () => {
             infiniteLoop={true}
             autoPlay={true}
           >
-            {data.projects.map((i) => (
+            {projectsData.map((i) => (
               <div key={i.title} className="workItem">
                 <img src={i.imgSrc} alt={i.title} />
                 <aside>

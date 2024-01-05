@@ -9,13 +9,13 @@ const Home = ({ ratio }) => {
   const projectCount = useRef(null);
 
   const animationClientsCount = () => {
-    animate(0, 100, {
+    animate(0, 10, {
       duration: 1,
       onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
     });
   };
   const animationProjectsCount = () => {
-    animate(0, 500, {
+    animate(0, 50, {
       duration: 1,
       onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
     });
@@ -71,7 +71,7 @@ const Home = ({ ratio }) => {
           <article>
             <p>
               +
-              {ratio < 2 && (
+              {ratio < 2.11 && (
                 <motion.span
                   whileInView={animationClientsCount}
                   ref={clientCount}
@@ -85,7 +85,7 @@ const Home = ({ ratio }) => {
             <article>
               <p>
                 +
-                {ratio < 2 && (
+                {ratio < 2.11 && (
                   <motion.span
                     ref={projectCount}
                     whileInView={animationProjectsCount}
