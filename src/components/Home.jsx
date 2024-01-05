@@ -2,13 +2,13 @@ import React, { useRef } from "react";
 import { animate, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
-import logo from "../assets/logo1_1.png";
+import me from "../assets/logo.png";
 
-const Home = () => {
+const Home = ({ ratio }) => {
   const clientCount = useRef(null);
   const projectCount = useRef(null);
 
-  const animationCLientsCount = () => {
+  const animationClientsCount = () => {
     animate(0, 100, {
       duration: 1,
       onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
@@ -43,19 +43,17 @@ const Home = () => {
       },
     },
   };
-
   return (
     <div id="home">
       <section>
         <div>
           <motion.h1 {...animations.h1}>
-            Hi, I am <br />
-            Muhammad Taha
+            Hi, I Am <br /> Muhammad Taha
           </motion.h1>
 
           <Typewriter
             options={{
-              strings: ["A Developer", "A Designer", "A Creater"],
+              strings: ["A Developer", "A Designer", "A Creator"],
               autoStart: true,
               loop: true,
               cursor: "",
@@ -73,10 +71,12 @@ const Home = () => {
           <article>
             <p>
               +
-              <motion.span
-                whileInView={animationCLientsCount}
-                ref={clientCount}
-              ></motion.span>
+              {ratio < 2 && (
+                <motion.span
+                  whileInView={animationClientsCount}
+                  ref={clientCount}
+                ></motion.span>
+              )}
             </p>
             <span>Clients Worldwide</span>
           </article>
@@ -85,10 +85,14 @@ const Home = () => {
             <article>
               <p>
                 +
-                <motion.span
-                  whileInView={animationProjectsCount}
-                  ref={projectCount}
-                ></motion.span>
+                {ratio < 2 && (
+                  <motion.span
+                    ref={projectCount}
+                    whileInView={animationProjectsCount}
+                  >
+                    500
+                  </motion.span>
+                )}
               </p>
               <span>Projects Done</span>
             </article>
@@ -100,9 +104,8 @@ const Home = () => {
           </aside>
         </div>
       </section>
-
       <section>
-        <img src={logo} alt="Muhammad Taha" />
+        <img src={me} alt="Taha" />
       </section>
       <BsChevronDown />
     </div>
