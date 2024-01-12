@@ -22,7 +22,7 @@ const projectsData = [
     title: "Crypto Warrior",
     description:
       "This is the sample description about the project details. The more details the more details and eventually more details because I don't have anything to write",
-    url: "https://react-crypto-app-pi.vercel.app",
+    url: "https://crypto-warrior.vercel.app",
     imgSrc:
       "https://cdn.pixabay.com/photo/2017/12/12/12/44/bitcoin-3014614_960_720.jpg",
   },
@@ -31,7 +31,7 @@ const projectsData = [
     title: "Master Cart",
     description:
       "This is the sample description about the project details. The more details the more details and eventually more details because I don't have anything to write",
-    url: "https://react-cart-eosin.vercel.app",
+    url: "https://master-cart.vercel.app",
     imgSrc:
       "https://cdn.pixabay.com/photo/2019/12/14/08/36/shopping-4694470_960_720.jpg",
   },
