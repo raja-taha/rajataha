@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { animate, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import { BsArrowUpRight } from "react-icons/bs";
+import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import me from "../assets/logo.png";
 
 const Home = ({ ratio }) => {
@@ -63,7 +63,7 @@ const Home = ({ ratio }) => {
 
           <div>
             <a href="mailto:rajataha062@gmail.com">Hire Me</a>
-            <a href="/work">
+            <a href="#work">
               Projects <BsArrowUpRight />
             </a>
           </div>
@@ -107,6 +107,7 @@ const Home = ({ ratio }) => {
       <section>
         <img src={me} alt="Taha" />
       </section>
+      <BsChevronDown />
     </div>
   );
 };

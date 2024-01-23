@@ -1,5 +1,10 @@
 import React from "react";
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiOutlineArrowUp,
+} from "react-icons/ai";
 import founder from "../assets/founder.jpg";
 
 const Footer = () => {
@@ -24,6 +29,9 @@ const Footer = () => {
           </a>
         </article>
       </aside>
+      <a href="#home">
+        <AiOutlineArrowUp />
+      </a>
     </footer>
   );
 };
